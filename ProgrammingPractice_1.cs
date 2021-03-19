@@ -1,8 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProgrammingPractice
 {
@@ -13,6 +10,7 @@ namespace ProgrammingPractice
             // FizzBuzz();
             // FindDuplicateInArray();
             // Console.WriteLine(Program2.Test(4,4));
+            ArrayProgram.ArrayMethod();
             Console.ReadKey();
             
         }
@@ -78,6 +76,34 @@ namespace ProgrammingPractice
         public static int Test(int x, int y)
         {
             return x == y ? (x + y) * 3 : x + y;
+        }
+    }
+
+    class ArrayProgram
+    // Allows user to input 10 values into an array and then prints the values as an array.
+    {
+        public static void ArrayMethod()
+        {
+            Console.WriteLine("State how many elements in array:: ");
+            int numOfElements = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[numOfElements];
+            int i;
+            Console.Write("\n\nRead and Print elements of an array:\n");
+            Console.Write("-----------------------------------------\n");
+
+            Console.Write("Input numOfElements elements in the array :\n");
+            for (i = 0; i < numOfElements; i++)
+            {
+                Console.Write("element - {0} : ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.Write("\nElements in array are: [ ");
+            for (i = 0; i < numOfElements; i++)
+            {
+                Console.Write("{0} ", arr[i]);
+            }
+            Console.Write(" ]\n");
         }
     }
 }
